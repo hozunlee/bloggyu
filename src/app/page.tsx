@@ -6,7 +6,13 @@ async function getData() {
         populate: ["main_cover"],
     });
 
-    return { props: { posts: res.data } };
+    const res2 = await fetch(
+        "https://tremendous-tabbi-hozunlee.koyeb.app/api/posts?populate[0]=main_cover"
+    ).then((res) => res.json());
+
+    console.log("res2.json() :>> ", res2);
+
+    return { props: { posts: res2.data } };
 }
 
 const data = [
@@ -24,69 +30,36 @@ const data = [
             main_cover: {
                 data: [
                     {
-                        id: 13,
+                        id: 15,
                         attributes: {
-                            name: "download.jpeg",
+                            name: "KakaoTalk_Image_2023-01-31-14-09-18.jpeg",
                             alternativeText: null,
                             caption: null,
-                            width: 620,
-                            height: 827,
+                            width: 1294,
+                            height: 971,
                             formats: {
-                                small: {
-                                    ext: ".jpeg",
-                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/small_download_1688477378559.jpeg",
-                                    hash: 1688477378559,
-                                    mime: "image/jpeg",
-                                    name: "small_download.jpeg",
-                                    path: null,
-                                    size: 23.82,
-                                    width: 375,
-                                    height: 500,
-                                },
-                                medium: {
-                                    ext: ".jpeg",
-                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/medium_download_1688477378558.jpeg",
-                                    hash: 1688477378558,
-                                    mime: "image/jpeg",
-                                    name: "medium_download.jpeg",
-                                    path: null,
-                                    size: 54,
-                                    width: 562,
-                                    height: 750,
-                                },
-                                xsmall: {
-                                    ext: ".jpeg",
-                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/xsmall_download_1688477378560.jpeg",
-                                    hash: 1688477378560,
-                                    mime: "image/jpeg",
-                                    name: "xsmall_download.jpeg",
-                                    path: null,
-                                    size: 1.06,
-                                    width: 48,
-                                    height: 64,
-                                },
                                 thumbnail: {
                                     ext: ".jpeg",
-                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/thumbnail_download_1688477378541.jpeg",
-                                    hash: 1688477378541,
+                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/thumbnail_KakaoTalk_Image_2023-01-31-14-09-18_1688484034585.jpeg",
+                                    hash: 1688484034585,
                                     mime: "image/jpeg",
-                                    name: "thumbnail_download.jpeg",
+                                    name: "thumbnail_KakaoTalk_Image_2023-01-31-14-09-18.jpeg",
                                     path: null,
-                                    size: 3.47,
-                                    width: 117,
+                                    size: 6.53,
+                                    width: 208,
                                     height: 156,
                                 },
                             },
-                            hash: "1688477378525",
+                            hash: "1688484034575",
                             ext: ".jpeg",
                             mime: "image/jpeg",
-                            size: 66.97,
-                            url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/download_1688477378525.jpeg",
+                            size: 163.98,
+                            url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/KakaoTalk_Image_2023-01-31-14-09-18_1688484034575.jpeg",
                             previewUrl: null,
                             provider: "strapi-provider-upload-supabase-v4",
                             provider_metadata: null,
-                            createdAt: "2023-07-04T22:29:39.267Z",
-                            updatedAt: "2023-07-04T22:29:39.267Z",
+                            createdAt: "2023-07-05T00:20:35.275Z",
+                            updatedAt: "2023-07-05T00:20:35.275Z",
                         },
                     },
                 ],
@@ -108,69 +81,36 @@ const data = [
             main_cover: {
                 data: [
                     {
-                        id: 13,
+                        id: 15,
                         attributes: {
-                            name: "download.jpeg",
+                            name: "KakaoTalk_Image_2023-01-31-14-09-18.jpeg",
                             alternativeText: null,
                             caption: null,
-                            width: 620,
-                            height: 827,
+                            width: 1294,
+                            height: 971,
                             formats: {
-                                small: {
-                                    ext: ".jpeg",
-                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/small_download_1688477378559.jpeg",
-                                    hash: 1688477378559,
-                                    mime: "image/jpeg",
-                                    name: "small_download.jpeg",
-                                    path: null,
-                                    size: 23.82,
-                                    width: 375,
-                                    height: 500,
-                                },
-                                medium: {
-                                    ext: ".jpeg",
-                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/medium_download_1688477378558.jpeg",
-                                    hash: 1688477378558,
-                                    mime: "image/jpeg",
-                                    name: "medium_download.jpeg",
-                                    path: null,
-                                    size: 54,
-                                    width: 562,
-                                    height: 750,
-                                },
-                                xsmall: {
-                                    ext: ".jpeg",
-                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/xsmall_download_1688477378560.jpeg",
-                                    hash: 1688477378560,
-                                    mime: "image/jpeg",
-                                    name: "xsmall_download.jpeg",
-                                    path: null,
-                                    size: 1.06,
-                                    width: 48,
-                                    height: 64,
-                                },
                                 thumbnail: {
                                     ext: ".jpeg",
-                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/large_KakaoTalk_Image_2023-04-05-16-31-39_002_1688483438661.jpeg",
-                                    hash: 1688477378541,
+                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/thumbnail_KakaoTalk_Image_2023-01-31-14-09-18_1688484034585.jpeg",
+                                    hash: 1688484034585,
                                     mime: "image/jpeg",
-                                    name: "thumbnail_download.jpeg",
+                                    name: "thumbnail_KakaoTalk_Image_2023-01-31-14-09-18.jpeg",
                                     path: null,
-                                    size: 3.47,
-                                    width: 117,
+                                    size: 6.53,
+                                    width: 208,
                                     height: 156,
                                 },
                             },
-                            hash: "1688477378525",
+                            hash: "1688484034575",
                             ext: ".jpeg",
                             mime: "image/jpeg",
-                            size: 66.97,
-                            url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/download_1688477378525.jpeg",
+                            size: 163.98,
+                            url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/KakaoTalk_Image_2023-01-31-14-09-18_1688484034575.jpeg",
                             previewUrl: null,
                             provider: "strapi-provider-upload-supabase-v4",
                             provider_metadata: null,
-                            createdAt: "2023-07-04T22:29:39.267Z",
-                            updatedAt: "2023-07-04T22:29:39.267Z",
+                            createdAt: "2023-07-05T00:20:35.275Z",
+                            updatedAt: "2023-07-05T00:20:35.275Z",
                         },
                     },
                 ],
@@ -192,69 +132,36 @@ const data = [
             main_cover: {
                 data: [
                     {
-                        id: 13,
+                        id: 15,
                         attributes: {
-                            name: "download.jpeg",
+                            name: "KakaoTalk_Image_2023-01-31-14-09-18.jpeg",
                             alternativeText: null,
                             caption: null,
-                            width: 620,
-                            height: 827,
+                            width: 1294,
+                            height: 971,
                             formats: {
-                                small: {
-                                    ext: ".jpeg",
-                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/small_download_1688477378559.jpeg",
-                                    hash: 1688477378559,
-                                    mime: "image/jpeg",
-                                    name: "small_download.jpeg",
-                                    path: null,
-                                    size: 23.82,
-                                    width: 375,
-                                    height: 500,
-                                },
-                                medium: {
-                                    ext: ".jpeg",
-                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/medium_download_1688477378558.jpeg",
-                                    hash: 1688477378558,
-                                    mime: "image/jpeg",
-                                    name: "medium_download.jpeg",
-                                    path: null,
-                                    size: 54,
-                                    width: 562,
-                                    height: 750,
-                                },
-                                xsmall: {
-                                    ext: ".jpeg",
-                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/xsmall_download_1688477378560.jpeg",
-                                    hash: 1688477378560,
-                                    mime: "image/jpeg",
-                                    name: "xsmall_download.jpeg",
-                                    path: null,
-                                    size: 1.06,
-                                    width: 48,
-                                    height: 64,
-                                },
                                 thumbnail: {
                                     ext: ".jpeg",
-                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/KakaoTalk_Image_2023-01-31-14-09-18_1688484034575.jpeg",
-                                    hash: 1688477378541,
+                                    url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/thumbnail_KakaoTalk_Image_2023-01-31-14-09-18_1688484034585.jpeg",
+                                    hash: 1688484034585,
                                     mime: "image/jpeg",
-                                    name: "thumbnail_download.jpeg",
+                                    name: "thumbnail_KakaoTalk_Image_2023-01-31-14-09-18.jpeg",
                                     path: null,
-                                    size: 3.47,
-                                    width: 117,
+                                    size: 6.53,
+                                    width: 208,
                                     height: 156,
                                 },
                             },
-                            hash: "1688477378525",
+                            hash: "1688484034575",
                             ext: ".jpeg",
                             mime: "image/jpeg",
-                            size: 66.97,
-                            url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/download_1688477378525.jpeg",
+                            size: 163.98,
+                            url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/KakaoTalk_Image_2023-01-31-14-09-18_1688484034575.jpeg",
                             previewUrl: null,
                             provider: "strapi-provider-upload-supabase-v4",
                             provider_metadata: null,
-                            createdAt: "2023-07-04T22:29:39.267Z",
-                            updatedAt: "2023-07-04T22:29:39.267Z",
+                            createdAt: "2023-07-05T00:20:35.275Z",
+                            updatedAt: "2023-07-05T00:20:35.275Z",
                         },
                     },
                 ],
@@ -264,13 +171,14 @@ const data = [
 ];
 
 export default async function Page() {
-    // const {
-    //     props: { posts },
-    // } = await getData();
+    const {
+        props: { posts },
+    } = await getData();
 
+    console.log("posts :>> ", posts);
     return (
         <div>
-            {data.map((card, i) => (
+            {posts.map((card, i) => (
                 <Cards card={card} />
             ))}
         </div>

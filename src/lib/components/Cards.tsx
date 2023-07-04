@@ -2,9 +2,13 @@
 
 import Link from "next/link";
 import NextImage from "./NextImage";
+import dayjs from "dayjs";
 
 export default function Cards({ card }) {
-    console.log("card :>> ", card);
+    const publishedAt = dayjs(card.publishedAt).format("MM/DD/YY");
+
+    const keywords = card.attributes.keyword.replace(/(\s*)/g, "").split(",");
+
     return (
         <div>
             <article className="">
@@ -17,7 +21,14 @@ export default function Cards({ card }) {
                 </header>
                 <h2 className="card-title">{card.attributes.title}</h2>
                 <p className="card-desc">{card.attributes.desc}</p>
-                {/* <footer>Footer</footer> */}
+                <div className="card-time">{publishedAt}</div>
+                <footer>
+                    {keywords.map((word, i) => (
+                        <span className="card-keyword" key={i}>
+                            {word}
+                        </span>
+                    ))}
+                </footer>
             </article>
         </div>
     );
