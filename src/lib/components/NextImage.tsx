@@ -1,24 +1,21 @@
 "use client";
+// import Image from "next/image";
 import Image from "next/image";
 
 export default function NextImage({ image }) {
-    const {
-        alternativeText,
-        width,
-        height,
-        formats: { thumbnail },
-    } = image.data[0].attributes;
+    const { alternativeText, width, height, url } = image.data[0].attributes;
 
     return (
         <Image
-            className="imgimg"
-            layout="fill"
+            // className="imgimg"
+            fill
             // width={width}
             // height={height}
-            objectFit="cover"
-            src={thumbnail.url}
+            style={{ objectFit: "cover" }}
+            src={url}
             alt={alternativeText || ""}
-            // placeholder="blur"
+            placeholder="blur"
+            blurDataURL="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFklEQVR42mN8//HLfwYiAOOoQvoqBABbWyZJf74GZgAAAABJRU5ErkJggg=="
         />
 
         // <img
