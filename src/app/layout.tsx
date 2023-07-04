@@ -1,7 +1,7 @@
-import "./globals.css";
 import { Inter } from "next/font/google";
 import "@picocss/pico";
 import "material-icons/iconfont/material-icons.css";
+import "./globals.css";
 
 import Nav from "@/lib/components/nav/Nav";
 

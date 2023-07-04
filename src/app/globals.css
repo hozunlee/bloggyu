@@ -1,6 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 :root {
     --foreground-rgb: 0, 0, 0;
@@ -24,4 +24,33 @@ body {
             rgb(var(--background-end-rgb))
         )
         rgb(var(--background-start-rgb));
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1.5rem;
+    word-break: keep-all;
+}
+
+.card-desc {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.post-thumbnail {
+    padding-top: 52.356%;
+    position: relative;
+}
+
+.imgimg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }

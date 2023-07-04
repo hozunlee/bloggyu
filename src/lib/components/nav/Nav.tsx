@@ -10,7 +10,7 @@ export default function Nav(params: type) {
             </ul>
             <ul>
                 <li>
-                    <strong>Tex Bloggyu</strong>
+                    <strong className="">Tex Bloggyu</strong>
                 </li>
             </ul>
             <ul>
