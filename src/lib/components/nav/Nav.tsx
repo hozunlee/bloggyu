@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function Nav(params: type) {
     return (
         <nav>
@@ -10,7 +12,9 @@ export default function Nav(params: type) {
             </ul>
             <ul>
                 <li>
-                    <strong className="">Tex Bloggyu</strong>
+                    <Link href={"/"}>
+                        <strong className="">Bloggyu</strong>
+                    </Link>
                 </li>
             </ul>
             <ul>

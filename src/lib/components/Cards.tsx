@@ -5,7 +5,7 @@ import NextImage from "./NextImage";
 import dayjs from "dayjs";
 
 export default function Cards({ card }) {
-    const publishedAt = dayjs(card.publishedAt).format("MM/DD/YY");
+    const publishedAt = dayjs(card.publishedAt).format("YY/MM/DD");
 
     const keywords = card.attributes.keyword.replace(/(\s*)/g, "").split(",");
 
@@ -13,7 +13,7 @@ export default function Cards({ card }) {
         <div>
             <article className="">
                 <header>
-                    <Link href={`/post/`}>
+                    <Link href={`/post/${card.id}`}>
                         <div className="post-thumbnail">
                             <NextImage image={card.attributes.main_cover} />
                         </div>

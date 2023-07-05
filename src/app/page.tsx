@@ -1,18 +1,20 @@
 import { fetchAPI } from "@/lib/api";
 import Cards from "@/lib/components/Cards";
+import axios from "axios";
 
 async function getData() {
-    const res = await fetchAPI("/posts", {
-        populate: ["main_cover"],
-    });
+    // const res = await fetchAPI("/posts", {
+    //     populate: ["main_cover"],
+    // });
 
-    const res2 = await fetch(
-        "https://tremendous-tabbi-hozunlee.koyeb.app/api/posts?populate[0]=main_cover"
-    ).then((res) => res.json());
+    axios;
+    const res2 = await axios(
+        `${
+            process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
+        }/api/posts?populate=*`
+    );
 
-    console.log("res2.json() :>> ", res2);
-
-    return { props: { posts: res2.data } };
+    return { props: { posts: res2.data.data } };
 }
 
 const data = [
@@ -175,11 +177,12 @@ export default async function Page() {
         props: { posts },
     } = await getData();
 
-    console.log("posts :>> ", posts);
     return (
         <div>
             {posts.map((card, i) => (
-                <Cards card={card} />
+                <div key={card.publishedAt}>
+                    <Cards card={card} />
+                </div>
             ))}
         </div>
     );
