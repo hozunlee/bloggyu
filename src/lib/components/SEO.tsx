@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 const Seo = ({ seo }) => {
     const { defaultSeo, siteName } = useContext(GlobalContext);
     const seoWithDefaults = {

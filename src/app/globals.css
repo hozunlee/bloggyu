@@ -92,3 +92,9 @@ figure > .post-desc {
     font-size: 0.7rem;
     padding: 30px 0;
 }
+
+.main-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}

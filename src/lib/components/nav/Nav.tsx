@@ -20,7 +20,7 @@ export default function Nav(params: type) {
             <ul>
                 <li>
                     <a href="#" className="secondary">
-                        로고
+                        <img src="/icon.png" alt="" className="main-icon" />
                     </a>
                 </li>
             </ul>

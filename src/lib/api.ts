@@ -1,3 +1,4 @@
+import axios from "axios";
 import qs from "qs";
 
 /**
@@ -34,15 +35,17 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
     )}`;
 
     // Trigger API call
-    // const response = await fetch(requestUrl, mergedOptions);
-    const response = await fetch(requestUrl);
+    // const response = await axios(requestUrl, mergedOptions);
+    const response = await axios(requestUrl);
+
+    console.log("response.data :>> ", response.data.data);
 
     // Handle response
-    if (!response.ok) {
+    if (!response.data) {
         console.error(response.statusText);
         throw new Error(`An error occured please try again`);
     }
-    const data = await response.json();
+    const data = response.data.data;
 
     return data;
 }

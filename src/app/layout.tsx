@@ -5,6 +5,7 @@ import "./globals.css";
 
 import Nav from "@/lib/components/nav/Nav";
 import Fonts from "@/lib/components/Fonts";
+import MoonSeo from "@/lib/components/MoonSEO";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <div className="container">
+                    <MoonSeo />
                     <Nav />
                     {children}
                     <p>© 2023 Hojun Lee. All Rights Reserved</p>
