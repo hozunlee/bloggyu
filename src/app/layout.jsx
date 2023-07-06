@@ -4,7 +4,6 @@ import "material-icons/iconfont/material-icons.css";
 import "./globals.css";
 
 import Nav from "@/lib/components/nav/Nav";
-import Fonts from "@/lib/components/Fonts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,11 +52,7 @@ export const metadata = {
     },
 };
 
-export default function RootLayout({
-    children,
-}: {
-    children: React.ReactNode;
-}) {
+export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body className={inter.className}>
