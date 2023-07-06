@@ -98,3 +98,9 @@ figure > .post-desc {
     height: 40px;
     border-radius: 100%;
 }
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.7rem;
+}

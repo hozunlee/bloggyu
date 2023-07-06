@@ -38,10 +38,8 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
     // const response = await axios(requestUrl, mergedOptions);
     const response = await axios(requestUrl);
 
-    console.log("response.data :>> ", response.data.data);
-
     // Handle response
-    if (!response.data) {
+    if (!response) {
         console.error(response.statusText);
         throw new Error(`An error occured please try again`);
     }
