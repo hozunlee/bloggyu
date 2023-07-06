@@ -28,7 +28,8 @@
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts",
-        "src/lib/components/Cards.jsx"
+        "src/lib/components/Cards.jsx",
+        "src/app/post/[id]/page.jsx"
     ],
     "exclude": ["node_modules"]
 }
