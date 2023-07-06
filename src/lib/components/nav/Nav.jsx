@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-export default function Nav(params: type) {
+export default function Nav(params) {
     return (
         <nav>
             <ul>
