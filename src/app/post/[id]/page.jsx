@@ -82,7 +82,7 @@ export default async function Detail({ params }) {
     const publishedAt = dayjs(post.attributes.publishedAt).format("YY/MM/DD");
 
     return (
-        <div className="container">
+        <div className="">
             <main className="detail-box">
                 <hgroup>
                     <h1>{post.attributes.title}</h1>
