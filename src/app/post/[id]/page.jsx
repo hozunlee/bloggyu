@@ -3,7 +3,6 @@ import NextImage from "@/lib/components/NextImage";
 import dayjs from "dayjs";
 
 import Markdown from "@/lib/markdown/Markdown";
-import MoonSeo from "@/lib/components/MoonSEO";
 import { cache } from "react";
 
 // async function getData(id) {
@@ -84,7 +83,6 @@ export default async function Detail({ params }) {
 
     return (
         <div className="container">
-            <MoonSeo title={`${post.attributes.title} | Bloggyu`} />
             <main className="detail-box">
                 <hgroup>
                     <h1>{post.attributes.title}</h1>
