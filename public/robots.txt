@@ -4,8 +4,8 @@ Allow: /
 Disallow: /exclude
 
 # Host
-Host: https://www.bloggyu.com/
+Host: https://bloggyu.com/
 
 # Sitemaps
-Sitemap: https://www.bloggyu.com/sitemap.xml
-Sitemap: https://www.bloggyu.com/sitemap/product-sitemap.xml
+Sitemap: https://bloggyu.com/sitemap.xml
+Sitemap: https://bloggyu.com/sitemap/post-sitemap.xml
