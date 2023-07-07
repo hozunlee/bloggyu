@@ -5,9 +5,11 @@ import NextImage from "./NextImage";
 import dayjs from "dayjs";
 
 export default function Cards({ card }) {
-    const publishedAt = dayjs(card.publishedAt).format("YY/MM/DD");
+    const publishedAt = dayjs(card.attributes.publishedAt).format("YY/MM/DD");
 
     const keywords = card.attributes.keyword.replace(/(\s*)/g, "").split(",");
+
+    const shortDesc = card.attributes.desc.slice(0, 100);
 
     return (
         <div>
@@ -20,7 +22,9 @@ export default function Cards({ card }) {
                     </Link>
                 </header>
                 <h2 className="card-title">{card.attributes.title}</h2>
-                <p className="card-desc">{card.attributes.desc}</p>
+                <p>
+                    {shortDesc}... <Link href={`/post/${card.id}`}>더보기</Link>
+                </p>
                 <div className="card-time">{publishedAt}</div>
                 <footer>
                     {keywords.map((word, i) => (

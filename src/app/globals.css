@@ -50,9 +50,9 @@ a:link {
 }
 
 .post-cover {
-    padding-top: 32.356%;
+    padding-top: 52.356%;
     position: relative;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -75,10 +75,13 @@ a:link {
     border: 1px solid #acacaa;
     border-radius: 10px;
     margin-right: 5px;
-    padding: 5px;
-
+    padding: 4px;
+    line-height: 2.5;
+    margin-bottom: 10px;
     font-size: 0.7rem;
     color: #acacac;
+    /* word-spacing: 1px; */
+    width: 100%;
 }
 
 .detail-box {
