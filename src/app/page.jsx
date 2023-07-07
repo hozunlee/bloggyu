@@ -7,7 +7,6 @@ async function getData() {
     //     populate: ["main_cover"],
     // });
 
-    axios;
     const res2 = await axios(
         `${
             process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
@@ -21,6 +20,14 @@ export default async function Page() {
     const {
         props: { posts },
     } = await getData();
+
+    const post = await axios(
+        `${
+            process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
+        }/api/posts`
+    );
+
+    console.log("post :>> ", post.data);
 
     return (
         <div>

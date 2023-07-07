@@ -1,1 +1,11 @@
-Sitemap: https://bloggyu.com/api/sitemap/index.xml
+# *
+User-agent: *
+Allow: /
+Disallow: /exclude
+
+# Host
+Host: https://www.bloggyu.com/
+
+# Sitemaps
+Sitemap: https://www.bloggyu.com/sitemap.xml
+Sitemap: https://www.bloggyu.com/sitemap/product-sitemap.xml
