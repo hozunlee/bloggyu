@@ -9,6 +9,8 @@ export const getServerSideProps = async (context) => {
         }/api/posts`
     );
 
+    console.log("post.data :>> ", post.data);
+
     const sitemapFields = post.data.map((item) => {
         return {
             loc: `${process.env.NEXT_PUBLIC_BLOG_URL}/${item.id}`, // 페이지 경로
