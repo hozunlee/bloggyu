@@ -27,8 +27,6 @@ export default async function Page() {
         }/api/posts`
     );
 
-    console.log("post :>> ", post.data);
-
     return (
         <div>
             {posts.map((card, i) => (

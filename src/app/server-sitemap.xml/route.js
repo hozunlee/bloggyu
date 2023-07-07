@@ -5,15 +5,13 @@ export async function GET(request) {
     // Method to source urls from cms
     // const urls = await fetch('https//example.com/api')
 
-    const {
-        post: { data },
-    } = await axios(
+    const getApiData = await axios(
         `${
             process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
         }/api/posts`
     );
 
-    const sitemapFields = data?.map((item) => {
+    const sitemapFields = getApiData?.data.data.map((item) => {
         return {
             loc: `${process.env.NEXT_PUBLIC_BLOG_URL}/post/${item.id}`, // 페이지 경로
             lastmod: new Date().toISOString(), // 최근변경일자
