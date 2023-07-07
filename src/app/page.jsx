@@ -21,12 +21,16 @@ export default async function Page() {
         props: { posts },
     } = await getData();
 
-    const post = await axios(
-        `${
-            process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
-        }/api/posts`
-    );
+    // const post = await axios(
+    //     `${
+    //         process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
+    //     }/api/posts`
+    // );
 
+    // console.log("post.data.data.id :>> ", post.data.data);
+
+    // const res = post.data.data.map((item) => item.id);
+    // console.log("res :>> ", res);
     return (
         <div>
             {posts.map((card, i) => (
