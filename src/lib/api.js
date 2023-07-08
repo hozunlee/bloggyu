@@ -24,6 +24,7 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
     const mergedOptions = {
         headers: {
             "Content-Type": "application/json",
+            "Cache-Control": "no-cache",
         },
         ...options,
     };
@@ -35,8 +36,8 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
     )}`;
 
     // Trigger API call
-    // const response = await axios(requestUrl, mergedOptions);
-    const response = await axios(requestUrl);
+    const response = await axios(requestUrl, mergedOptions);
+    // const response = await axios(requestUrl);
 
     // Handle response
     if (!response) {

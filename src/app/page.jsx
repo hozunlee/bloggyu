@@ -1,5 +1,3 @@
-import { fetchAPI } from "@/lib/api";
-
 import Script from "next/script";
 import MainPage from "@/lib/components/MainPage";
 
