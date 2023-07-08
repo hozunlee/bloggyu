@@ -1,8 +1,6 @@
 import Script from "next/script";
 import MainPage from "@/lib/components/MainPage";
 export const dynamic = "error";
-export const runtime = "experimental-edge";
-
 // async function getData() {
 //     const res = await fetchAPI("/posts", {
 //         populate: ["main_cover"],
