@@ -1,10 +1,12 @@
 import { fetchAPI } from "@/lib/api";
 import Cards from "@/lib/components/Cards";
 import axios from "axios";
+import Script from "next/script";
 
 async function getData() {
     const res = await fetchAPI("/posts", {
         populate: ["main_cover"],
+        sort: ["id:desc"],
     });
 
     // const res2 = await axios(
@@ -22,16 +24,6 @@ export default async function Page() {
         props: { posts },
     } = await getData();
 
-    // const post = await axios(
-    //     `${
-    //         process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
-    //     }/api/posts`
-    // );
-
-    // console.log("post.data.data.id :>> ", post.data.data);
-
-    // const res = post.data.data.map((item) => item.id);
-    // console.log("res :>> ", res);
     return (
         <div>
             {posts.map((card, i) => (
@@ -39,6 +31,11 @@ export default async function Page() {
                     <Cards card={card} />
                 </div>
             ))}
+            <Script
+                async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8220165683532908"
+                crossorigin="anonymous"
+            ></Script>
         </div>
     );
 }
