@@ -7,6 +7,7 @@ import Nav from "@/lib/components/nav/Nav";
 
 import GoogleAnalytics from "../lib/components/GoogleAnalytics";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -67,6 +68,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
+            <Script
+                async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8220165683532908"
+                crossorigin="anonymous"
+            ></Script>
             <GoogleAnalytics GA_TRACKING_ID={process.env.GA_TRACKING_ID} />
             <Analytics />
             <body className={inter.className}>

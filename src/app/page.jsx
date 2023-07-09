@@ -1,7 +1,6 @@
 import Script from "next/script";
 import MainPage from "@/lib/components/MainPage";
-import Head from "next/head";
-export const dynamic = "error";
+
 // async function getData() {
 //     const res = await fetchAPI("/posts", {
 //         populate: ["main_cover"],
@@ -23,14 +22,5 @@ export default async function Page() {
     //     props: { posts },
     // } = await getData();
 
-    return (
-        <div>
-            <MainPage />
-            <Script
-                async
-                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8220165683532908"
-                crossorigin="anonymous"
-            ></Script>
-        </div>
-    );
+    return <div>{/* <MainPage /> */}</div>;
 }
