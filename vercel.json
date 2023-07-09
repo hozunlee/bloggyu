@@ -1,7 +1,7 @@
 {
     "headers": [
         {
-            "source": "/about.js",
+            "source": "/post",
             "headers": [
                 {
                     "key": "Cache-Control",
