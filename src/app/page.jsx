@@ -22,5 +22,9 @@ export default async function Page() {
     //     props: { posts },
     // } = await getData();
 
-    return <div>{/* <MainPage /> */}</div>;
+    return (
+        <div>
+            <MainPage />
+        </div>
+    );
 }
