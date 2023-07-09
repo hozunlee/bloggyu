@@ -6,9 +6,7 @@ export async function GET(request) {
     // const urls = await fetch('https//example.com/api')
 
     const getApiData = await axios(
-        `${
-            process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
-        }/api/posts`
+        `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/posts`
     );
 
     const sitemapFields = getApiData?.data.data.map((item) => {
