@@ -9,7 +9,14 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
     title: "Bloggyu",
-    naverSiteVerification: "1500bbc20b27929a66dc448502bf5742451cc40c",
+    verification: {
+        // google: "your code",
+        other: {
+            "naver-site-verification":
+                "1500bbc20b27929a66dc448502bf5742451cc40c",
+        },
+        naver: "1500bbc20b27929a66dc448502bf5742451cc40c",
+    },
     description:
         "bloggyu 는 금융 정보에 관한 것을 다룹니다. 금융, 세금, 세법, 돈에 대한 모든 것",
     metadataBase: new URL("https://www.bloggyu.com"),

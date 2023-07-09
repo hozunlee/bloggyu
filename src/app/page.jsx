@@ -1,5 +1,6 @@
 import Script from "next/script";
 import MainPage from "@/lib/components/MainPage";
+import Head from "next/head";
 export const dynamic = "error";
 // async function getData() {
 //     const res = await fetchAPI("/posts", {
