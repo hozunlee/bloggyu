@@ -4,6 +4,7 @@ import "material-icons/iconfont/material-icons.css";
 import "./globals.css";
 
 import Nav from "@/lib/components/nav/Nav";
+import GoogleAnalytics from "../lib/components/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -64,6 +65,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
+            <GoogleAnalytics GA_TRACKING_ID={process.env.GA_TRACKING_ID} />
             <body className={inter.className}>
                 <div className="container">
                     <Nav />
