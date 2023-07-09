@@ -24,7 +24,7 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
     const mergedOptions = {
         headers: {
             "Content-Type": "application/json",
-            "Cache-Control": "no-cache",
+            "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
         },
         ...options,
     };

@@ -1,5 +1,6 @@
 import { fetchAPI } from "@/lib/api";
 import Cards from "@/lib/components/Cards";
+import axios from "axios";
 
 async function getData() {
     const res = await fetchAPI("/posts", {
@@ -10,7 +11,7 @@ async function getData() {
     // const res2 = await axios(
     //     `${
     //         process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
-    //     }/api/posts?populate=*`
+    //     }/api/posts?populate=*?sort=id:desc`
     // );
 
     // return { props: { posts: res2.data.data } };
@@ -22,9 +23,16 @@ export default async function MainPage() {
         props: { posts },
     } = await getData();
 
+    const res2 = await axios(
+        `${
+            process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
+        }/api/posts?populate%5B0%5D=main_cover&sort%5B0%5D=id%3Adesc`
+    );
+
+    const result = res2.data.data;
     return (
         <div>
-            {posts.map((card, i) => (
+            {result.map((card, i) => (
                 <div key={card.publishedAt}>
                     <Cards card={card} />
                 </div>
