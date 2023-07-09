@@ -1,3 +1,8 @@
+export const fetchCache = "force-no-store";
+export const revalidate = 0; // seconds
+export const dynamic = "force-dynamic";
+//https://github.com/vercel/next.js/issues/51788
+
 import { fetchAPI } from "@/lib/api";
 import Cards from "@/lib/components/Cards";
 
