@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default  sitemap`` = async () => {
+export default sitemap = async () => {
     // const productNos = [1, 2, 3, 4, 5, 6, 7, 8]; // fetch를 통해 데이터 가져오는 구간
 
     const getApiData = await axios(
@@ -21,10 +21,10 @@ export default  sitemap`` = async () => {
         };
     });
 
-    return   [
-      { url: baseUrl, lastModified: new Date() },
-      { url: `${baseUrl}/blog`, lastModified: new Date() },
-  
-      ...postUrls,
-    ]
-  }
+    return [
+        { url: baseUrl, lastModified: new Date() },
+        { url: `${baseUrl}/blog`, lastModified: new Date() },
+
+        ...postUrls,
+    ];
+};
