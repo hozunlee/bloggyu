@@ -1,6 +1,5 @@
 import Script from "next/script";
 import MainPage from "@/lib/components/MainPage";
-import Refreshpage from "@/lib/components/Repfreshpage";
 
 // async function getData() {
 //     const res = await fetchAPI("/posts", {
@@ -25,7 +24,6 @@ export default async function Page() {
 
     return (
         <div>
-            {/* <Refreshpage /> */}
             <MainPage />
         </div>
     );

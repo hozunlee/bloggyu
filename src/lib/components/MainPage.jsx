@@ -3,6 +3,9 @@ export const revalidate = 0; // seconds
 export const dynamic = "force-dynamic";
 //https://github.com/vercel/next.js/issues/51788
 
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+
 import { fetchAPI } from "@/lib/api";
 import Cards from "@/lib/components/Cards";
 
