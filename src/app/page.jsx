@@ -1,6 +1,5 @@
 import { fetchAPI } from "@/lib/api";
 import Cards from "@/lib/components/Cards";
-import MainPage from "@/lib/components/MainPage";
 
 export const fetchCache = "force-no-store";
 export const revalidate = 0; // seconds
