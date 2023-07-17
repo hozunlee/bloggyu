@@ -10,7 +10,6 @@ export async function GET(request) {
     );
 
     const sitemapFields = getApiData?.data.data.map((item) => {
-        console.log("item.id :>> ", item.id);
         return {
             loc: `${process.env.NEXT_PUBLIC_BLOG_URL}/post/${item.id}`, // 페이지 경로
             lastmod: new Date().toISOString(), // 최근변경일자
@@ -18,7 +17,6 @@ export async function GET(request) {
             priority: 0.9, // 페이지 주소 우선순위 (검색엔진에 제공됨, 우선순위가 높은 순서대로 크롤링함)
         };
     });
-    console.log("sitemapFields :>> ", sitemapFields);
     return getServerSideSitemap(sitemapFields);
 }
 
