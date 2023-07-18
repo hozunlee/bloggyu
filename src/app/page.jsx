@@ -1,9 +1,10 @@
 import { fetchAPI } from "@/lib/api";
 import Cards from "@/lib/components/Cards";
 
-export const fetchCache = "force-no-store";
-export const revalidate = 0; // seconds
-export const dynamic = "force-dynamic";
+//캐싱만될때
+// export const fetchCache = "force-no-store";
+// export const revalidate = 0; // seconds
+// export const dynamic = "force-dynamic";
 
 async function getData() {
     const res = await fetchAPI("/posts", {
