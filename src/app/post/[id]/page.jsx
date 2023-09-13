@@ -79,7 +79,7 @@ export default async function Detail({ params }) {
     } = await getData(params.id);
 
     const imgURL = post.attributes.main_cover;
-    const publishedAt = dayjs(post.attributes.publishedAt).format("YY/MM/DD");
+    const publishedAt = dayjs(post.attributes.publishedAt).format("DD/MM/YYYY");
 
     return (
         <div className="">
