@@ -13,7 +13,9 @@ export default function Nav(params) {
             <ul>
                 <li>
                     <Link href={"/"}>
-                        <strong className="">Bloggyu</strong>
+                        <strong className="">
+                            신차 장기렌트 전문가 규팀장
+                        </strong>
                     </Link>
                 </li>
             </ul>

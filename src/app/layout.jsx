@@ -12,7 +12,7 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-    title: "Bloggyu",
+    title: "신차 장기렌트 규팀장",
     verification: {
         // google: "your code",
         other: {
@@ -22,17 +22,14 @@ export const metadata = {
         naver: "1500bbc20b27929a66dc448502bf5742451cc40c",
     },
     description:
-        "bloggyu 는 금융 정보에 관한 것을 다룹니다. 금융, 세금, 세법, 돈에 대한 모든 것",
+        "규팀장은 신차 장기렌트에 대한 모든 것을 다룹니다. 장기렌트, 비용처리, 장기리스에 대한 모든 것",
     metadataBase: new URL("https://www.bloggyu.com"),
     article: true,
     generator: "Next.js",
-    applicationName: "Bloggyu",
+    applicationName: "신차 장기렌트 규팀장",
     referrer: "origin-when-cross-origin",
-    keywords: ["주식", "세법", "세금", "금융"],
-    authors: [
-        { name: "moon" },
-        { name: "moon", url: "https://www.bloggyu.com" },
-    ],
+    keywords: ["장기렌트", "비용처리", "세금", "금융"],
+    authors: [{ name: "gyu" }, { name: "gyu", url: "https://www.bloggyu.com" }],
     colorScheme: "dark",
     creator: "moon",
 
@@ -42,11 +39,11 @@ export const metadata = {
         telephone: false,
     },
     openGraph: {
-        title: "Bloggyu",
+        title: "신차 장기렌트 규팀장",
         description:
-            "Bloggyu covers all the financial information in everyday life. Finance, taxes, tax laws, anything about money",
+            "Bloggyu covers all the long-term rentCar in everyday life. rentCar, Finance, taxes, tax laws, anything about money",
         url: "https://www.bloggyu.com",
-        siteName: "Bloggyu",
+        siteName: "신차 장기렌트 규팀장",
         images: [
             {
                 url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/thumbnail_1_1688543451657.png",
@@ -57,7 +54,7 @@ export const metadata = {
                 url: "https://pcpoarzixkpbnromuhrh.supabase.co/storage/v1/object/public/strapi-uploads/1_1688543451622.png",
                 width: 1800,
                 height: 1600,
-                alt: "Bloggyu maon",
+                alt: "Bloggyu main",
             },
         ],
         locale: "ko_KR",
