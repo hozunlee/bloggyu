@@ -107,3 +107,7 @@ figure > .post-desc {
     padding: 20px 0;
     font-size: 0.7rem;
 }
+
+blockquote {
+    border-left: 4px solid #a6e1fa;
+}
