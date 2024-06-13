@@ -29,14 +29,20 @@ export const generateMetadata = async ({ params }) => {
     } = await getData(params.id);
 
     return {
-        title: `${post?.attributes.title} | Bloggyu`,
+        title: `${post?.attributes.title} | 장기렌트카`,
         description: post.attributes.desc,
         shareImage: post.attributes.main_cover.data[0].attributes.url,
         article: true,
         generator: "Next.js",
-        applicationName: "Bloggyu",
+        applicationName: "신차 장기렌트카 규팀장",
         referrer: "origin-when-cross-origin",
-        keywords: ["주식", "세법", "세금", "금융"],
+        keywords: [
+            "장기렌트카",
+            "장기렌트",
+            "세금",
+            "장기리스",
+            "신차 장기렌트",
+        ],
         authors: [
             { name: "moon" },
             { name: "moon", url: "https://www.bloggyu.com" },
@@ -52,7 +58,7 @@ export const generateMetadata = async ({ params }) => {
             title: post?.attributes.title,
             description: post.attributes.desc,
             url: `https://www.bloggyu.com/post/${post.id}`,
-            siteName: "Bloggyu",
+            siteName: "장기렌트카 규팀장",
             images: [
                 {
                     url: post.attributes.main_cover.data[0].attributes.formats

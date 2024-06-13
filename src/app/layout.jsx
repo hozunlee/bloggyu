@@ -41,7 +41,7 @@ export const metadata = {
     openGraph: {
         title: "신차 장기렌트 규팀장",
         description:
-            "Bloggyu covers all the long-term rentCar in everyday life. rentCar, Finance, taxes, tax laws, anything about money",
+            "규팀장은 신차 장기렌트에 대한 모든 것을 다룹니다. 장기렌트, 비용처리, 장기리스에 대한 모든 것",
         url: "https://www.bloggyu.com",
         siteName: "신차 장기렌트 규팀장",
         images: [

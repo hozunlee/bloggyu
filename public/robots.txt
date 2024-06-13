@@ -7,4 +7,5 @@ Host: https://bloggyu.com
 
 # Sitemaps
 Sitemap: https://bloggyu.com/sitemap.xml
-Sitemap: https://bloggyu.com/server-sitemap.xml
+
+#DaumWebMasterTool:414d34c8f0ac0baef3d8ebc65838b5869dc73ef832a195b01823d7c458043cec:z1COGM3h7ttFOEubupCSlw==
