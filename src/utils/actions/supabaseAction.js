@@ -3,6 +3,7 @@
 import { redirect } from 'next/navigation'
 
 import { createClient } from '@/utils/supabase/server'
+import { revalidatePath } from 'next/cache'
 
 export async function postConsult(formData) {
 	const supabase = createClient()
@@ -21,7 +22,5 @@ export async function postConsult(formData) {
 		console.error('error', error)
 		// redirect('/error')
 	}
-
-	// redirect('/account')
-	console.log('성공')
+	redirect('/')
 }
