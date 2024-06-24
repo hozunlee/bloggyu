@@ -37,9 +37,7 @@ export default async function Home() {
 
 	return (
 		<>
-			<h1 class="font-bold text-2xl text-center py-5">
-				차량 렌트 전 필수 체크! 자동차 제원 정보 공략집{' '}
-			</h1>
+			<h1>차량 렌트 전 필수 체크! 자동차 제원 정보 공략집 </h1>
 			{posts.map((card, i) => (
 				<div key={card.publishedAt}>
 					<Cards card={card} />
